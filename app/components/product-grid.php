@@ -72,7 +72,7 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 				<span><a href="#" class="addFavourite <?php if($x == 5) { echo 'active'; } ?>"></a></span>
 			</div>
 			<div class="rank">12</div>
-			<?php if ($chill) { ?><div class="rank">McNoughts</div> <?php } ?>
+			<?php if ($chill) { ?><div class="rank">McDonagh</div> <?php } ?>
 			<div class="rank">2.6</div>
 			<div class="margin">21%</div>
 			<div class="pack">280G/12</div>
@@ -96,7 +96,10 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 			<div class="img">
 				<img src="http://www.placehold.it/200x120" alt="">
 			</div>
-			<div class="description"><h3>Description</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea error laborum, velit doloribus delectus laboriosam ut odio soluta, nam accusamus.</p></div>
+			<div class="description"><h3>Description</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea error laborum, velit doloribus delectus<br />
+				<?php if ($chill) { ?><strong>Shelf life:</strong> 2 months <?php } ;?>
+				</p>
+			</div>
 			<ul class="codes">
 				<li class="ean"><strong>EAN:</strong> 898709870987</li>
 				<li class="tuc"><strong>TUC:</strong> 898709870987</li>
