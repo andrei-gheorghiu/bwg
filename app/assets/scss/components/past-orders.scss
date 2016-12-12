@@ -16,10 +16,10 @@ ul.past {
 			background: url('../../../assets/images/basket.svg') center center no-repeat;
 			> a {
 				display: block;
-				width: 34px;
-				height: 34px;
-				top: -5px;
-				left: -5px;
+				width: 59px;
+				height: 59px;
+				top: -18px;
+				left: -18px;
 				position: relative;
 				&:hover {
 					background-color: rgba(0,0,0,.05);
@@ -40,11 +40,14 @@ ul.past {
 			}
 		}
 		.grid {
-			display: none;
+			display: block;
+			max-height: 0;
+			overflow: hidden;
 			border-top: solid 1px #ccc;
 			.item:nth-last-child(2) {
 				border-bottom: 2px solid rgba(0,0,0,1);
 			}
+			transition: max-height .3s cubic-bezier(.4,0,.2,1);
 		}
 		.summary {
 			display: none;
@@ -83,6 +86,7 @@ ul.past {
 		&.active {
 			.summary, .grid {
 				display: block;
+				max-height: 100vh;
 				background-color: rgba(0,0,0,0.04);
 			}
 		}
@@ -149,15 +153,16 @@ ul.past li.title {
 			background: 0 0;
 			border-right: 2px solid #000;
 			border-bottom: 2px solid #000;
-			transform: rotate(45deg);
+			transform: rotate(45deg) scale(1,1);
+			transition: all .3s cubic-bezier(.4,0,.2,1);
 			right: 25px;
 		}
 	}
 
 	&.active {
 		a::after {
-		    transform: rotate(-135deg);
-		    margin-top: 10px;
+			transform: rotate(45deg) scale(-1,-1);
+			margin-top: 10px;
 		}
 	}
 }
