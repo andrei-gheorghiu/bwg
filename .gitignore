@@ -1,7 +1,6 @@
 /bower_components/
 /node_modules/
 /_ww/
-.idea/*
 .DS_Store
 
 /app/thumbs/
