@@ -160,15 +160,11 @@ header {
 			}
 		}
 		.basket {
-			display: none;
-		    @media screen and (max-width: 1000px) {
-		    	display: inline-block;
-			    svg {
-					width: 26px;
-					height: 26px;
-				}
-		    }
-			
+			display: inline-block;
+			svg {
+				width: 26px;
+				height: 26px;
+			}
 		}
 	}
 }
