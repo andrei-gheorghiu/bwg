@@ -133,10 +133,23 @@ function resetFilter(){
 
 
 function showPlanogram(){
-  if($('div.planogram').hasClass('hide')){
-    $('div.planogram').removeClass('hide');
+  var pGram = $('div.planogram');
+  if(pGram.hasClass('hide')){
+    pGram.removeClass('hide');
   } else {
-    $('div.planogram').addClass('hide');
+    pGram.addClass('hide');
+  }
+  setTimeout(removePngs, 100);
+}
+
+function removePngs() {
+  var pGram = $('div.planogram');
+  if (pGram.find('a').length()) {
+    pGram.find('a').each(function () {
+      $(this).text($(this).text().replace('.png', ''));
+    });
+  } else {
+    setTimeout(removePngs, 100);
   }
 }
 
