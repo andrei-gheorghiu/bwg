@@ -3,7 +3,7 @@
 <header>
   <div>
     <div class="logo">
-      <a href="landing.php">Shoplink</a>
+      <a href="index.php">Shoplink</a>
     </div>
 
     <div class="search <?php if($login) { echo 'invisible'; } ?>">
@@ -17,7 +17,7 @@
     <nav class="<?php if($login) { echo 'invisible'; } ?>">
 
       <div class="home">
-        <a href="landing.php">
+        <a href="index.php">
           <?php echo file_get_contents("assets/images/home.svg"); ?>
         </a>
       </div>

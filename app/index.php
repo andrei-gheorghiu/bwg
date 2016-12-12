@@ -2,7 +2,7 @@
 
 <div id="wrap">
 
-	<main>
+	<main class="full">
 
 		<?php include('components/landing.php') ?>
 

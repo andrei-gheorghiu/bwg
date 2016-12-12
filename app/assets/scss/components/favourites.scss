@@ -7,7 +7,7 @@ ul.favourites {
 		position: relative;	
 		border-bottom: solid 1px #ccc;
 		&:last-of-type {
-				border-bottom: 0px;
+				border-bottom: 0;
 		}
 		> a {
 			display: block;
@@ -16,15 +16,19 @@ ul.favourites {
 			font-weight: 100;
 		}
 		.grid {
-			display: none;
+			display: block;
+			max-height: 0;
 			border-top: solid 1px #ccc;
 			.item:nth-last-child(2) {
 				border-bottom: 2px solid rgba(0,0,0,1);
 			}
+			transition: max-height .3s cubic-bezier(.4,0,.2,1);
 		}
+		overflow: hidden;
 		&.active {
 			.grid {
 				display: block;
+				max-height: 100vh;
 				background-color: rgba(0,0,0,0.04);
 			}
 		}
@@ -48,14 +52,15 @@ ul.favourites li.title {
 			background: 0 0;
 			border-right: 2px solid #000;
 			border-bottom: 2px solid #000;
-			transform: rotate(45deg);
+			transform: rotate(45deg) scale(1,1);
+			transition: all .3s cubic-bezier(.4,0,.2,1);
 			right: 25px;
 		}
 	}
 
 	&.active {
 		a::after {
-		    transform: rotate(-135deg);
+		    transform: rotate(45deg) scale(-1,-1);
 		    margin-top: 10px;
 		}
 	}
