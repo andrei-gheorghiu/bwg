@@ -118,8 +118,9 @@ header {
 					height: 30px;
 					background: $col1;
 					position: absolute;
-					top: 0px;
-					right: 10px;
+					top: 0;
+					z-index: -1;
+					right: calc(50% - 15px);
 					transform: rotate(45deg);
 				}
 				&.closed {
