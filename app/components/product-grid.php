@@ -2,6 +2,7 @@
 $count = isset($count)? $count:false;
 $cart = isset($cart)? $cart:false;
 $full = isset($full)? $full:false;
+$chill = isset($_GET['chill']) ? $_GET['chill']:false;
 ?>
 <section class="grid">
 	<div class="master">
@@ -19,6 +20,15 @@ $full = isset($full)? $full:false;
 				</div>
 			</a> 
 		</div>
+		<?php if ($chill) { ?>
+		<div class="rank">
+			<a href="#">Supplier
+				<div class="arrows">
+					<span class="up"></span>
+				</div>
+			</a>
+		</div>
+		<?php } ?>
 		<div class="rank">
 			<a href="#">RSP
 			<div class="arrows">
@@ -62,6 +72,7 @@ $full = isset($full)? $full:false;
 				<span><a href="#" class="addFavourite <?php if($x == 5) { echo 'active'; } ?>"></a></span>
 			</div>
 			<div class="rank">12</div>
+			<?php if ($chill) { ?><div class="rank">McNoughts</div> <?php } ?>
 			<div class="rank">2.6</div>
 			<div class="margin">21%</div>
 			<div class="pack">280G/12</div>

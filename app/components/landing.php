@@ -1,7 +1,7 @@
 <section class="landing">
 	<ul>
 		<li><a href="store.php">Ambient</a></li>
-		<li><a href="store.php">Chill</a></li>
+		<li><a href="store.php?chill=true">Chill</a></li>
 		<li><a href="store.php">Alcohol</a></li>
 		<li>
 			<a class="title" href="#">Value Centre</a>
