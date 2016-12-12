@@ -68,7 +68,7 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 	<?php for($x = 0; $x <= $count; $x++){ ?>
 	<div class="item <?php if($full) { echo 'active'; } ?> <?php if($x == 3) { echo 'incart'; } ?> ">
 		<div>
-			<div class="name">Wine A
+			<div class="name">Wine A. This would be a long title to demonstrate fixing issue 52
 				<span><a href="#" class="addFavourite <?php if($x == 5) { echo 'active'; } ?>"></a></span>
 			</div>
 			<div class="rank">12</div>
@@ -104,11 +104,13 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 				<li class="ean"><strong>EAN:</strong> 898709870987</li>
 				<li class="tuc"><strong>TUC:</strong> 898709870987</li>
 				<li class="onOrder"><strong>On Order:</strong> 13</li>
+				<li class="promotionStart"><strong>Start date:</strong> 12/12/2016</li>
 			</ul>
 			<ul class="codes">
 				<li class="qty"><strong>Pallet QTY:</strong> 15</li>
 				<li class="vat"><strong>VAT:</strong> 13.5</li>
 				<li class="increase"><strong>14/11/16</strong></li>
+				<li class="promotionEnd"><strong>End date:</strong> 21/12/2016</li>
 			</ul>
 			<ul class="extra">
 				<li class="tags">
