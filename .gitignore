@@ -2,6 +2,8 @@
 /node_modules/
 /_ww/
 /.idea/
+*.7z
+*.zip
 .DS_Store
 
 /app/thumbs/
