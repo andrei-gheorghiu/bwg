@@ -307,7 +307,7 @@ function addToList(e) {
 }
 
 function windowResized() {
-  $w.width()<1e3?hasScroller&&($d.off("scroll").on("resize",windowResized),hasScroller=!1):hasScroller||($d.on("scroll",windowScroller),hasScroller=!0);
+  $w.width()<1e3?hasScroller&&($d.off("scroll").on("resize",windowResized),hasScroller=!1):hasScroller||($d.on("scroll",windowScroller)&&windowScroller(),hasScroller=!0);
 }
 function windowScroller(){
   $('aside').css({top:$(document).scrollTop()+'px'})
