@@ -9,12 +9,12 @@
 			font-size: 14px;
 			&.name {
 				flex: 1.75;
-				padding-right: 20px;
+				padding-right: 30px;
 			}
 			&.full {
 				display: inline-block;
-				top: 0px;
-				left: 0px;
+				top: 0;
+				left: 0;
 				width: 100%;
 				height: 150px;
 				background: red;
