@@ -48,7 +48,6 @@
 		display: block;
 		font-size: 14px;
 		font-weight: 100;
-		font-size: 14px;
 		padding: 16px 20px;
 		text-align: center;
 		transition: $trans;
@@ -57,7 +56,7 @@
 		}
 	}
 	.order {
-		overflow-y: scroll;
+		overflow-y: auto;
 		max-height: 50vh;
 	}
 }

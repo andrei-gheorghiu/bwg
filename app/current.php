@@ -2,13 +2,15 @@
 
 <div id="wrap">
 
-	<main>
-		<?php include('components/current-order.php') ?>
-	</main>
+    <main>
+        <?php include('components/current-order.php') ?>
+    </main>
 
-	<aside>
-		<?php include('components/promotions.php') ?>
-	</aside>	
+    <aside>
+        <div class="wrapper">
+            <?php include('components/promotions.php') ?>
+        </div>
+    </aside>
 
 </div>
 

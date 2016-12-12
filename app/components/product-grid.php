@@ -1,5 +1,9 @@
+<?php
+$count = isset($count)? $count:false;
+$cart = isset($cart)? $cart:false;
+$full = isset($full)? $full:false;
+?>
 <section class="grid">
-	
 	<div class="master">
 		<div class="name">
 			<a href="#" class="active">Name

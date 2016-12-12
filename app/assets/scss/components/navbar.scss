@@ -2,20 +2,21 @@ header {
 	padding: 20px 0;
 	background: white;
 	height: 96px;
-	top: 0px;
+	top: 0;
 	position: fixed;
 	width: 100%;
 	z-index: 9999;
-	box-shadow: 0px 0px 0px 4px rgba(0,0,0,.07);
+	box-shadow: 0 0 0 4px rgba(0,0,0,.07);
 	& > div {
 		padding: 0 2vw;
 		display: flex;
+		justify-content: space-between;
 		margin: 0 auto;
 		max-width: 1600px;
 	}
 
 	div.logo {
-		flex: 2;
+		flex: 0 0 150px;
 		font-size: 28px;
 		font-weight: 700;
 		position: relative;
@@ -33,7 +34,8 @@ header {
 	}
 
 	.search {
-		flex: 4;
+		flex: 1 0 auto;
+		max-width: 50%;
 		position: relative;
 		.searchbox {
 			width: 100%;
@@ -51,7 +53,6 @@ header {
 		} 
 		input[type="submit"] {
 			position: absolute;
-			top: 0px;
 			right: 7px;
 			top: 50%;
 			transform: translateY(-50%);
@@ -67,10 +68,11 @@ header {
 	}
 
 	nav {
-		flex: 2;
-		text-align: right;
+		flex: 0 0 222px;
 		position: relative;
-		.favourites, .settings, .basket {
+		display: flex;
+		flex-wrap: nowrap;
+		.favourites, .settings, .basket, .home {
 			display: inline-block;
 			a {
 				display: inline-block;

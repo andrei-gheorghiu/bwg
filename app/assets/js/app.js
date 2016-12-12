@@ -4,7 +4,8 @@ function l(m) { console.log(m); }
 // Setup
 var $d = $(document),
     $w = $(window),
-    favourites = ['Mondays Orders', 'Tuesdays Orders', 'Impulse Buys', 'Christmas Stock'];
+    favourites = ['Mondays Orders', 'Tuesdays Orders', 'Impulse Buys', 'Christmas Stock'],
+    hasScroller = false;
 
 
 // Interactions
@@ -41,11 +42,10 @@ $d
 // Favourites List
 .on('click', 'a.addFavourite', toggleFavs)
 .on('submit', 'form.addList', addList)
-.on('click', 'ul.favList a', addToList)
-.on('scroll', function(e){
-  console.log(e);
-})
-
+.on('click', 'ul.favList a', addToList);
+$w
+.on('load resize', windowResized)
+.trigger('resize');
 
 
 // Functions
@@ -306,4 +306,9 @@ function addToList(e) {
   
 }
 
-
+function windowResized() {
+  $w.width()<1e3?hasScroller&&($d.off("scroll").on("resize",windowResized),hasScroller=!1):hasScroller||($d.on("scroll",windowScroller),hasScroller=!0);
+}
+function windowScroller(){
+  $('aside').css({top:$(document).scrollTop()+'px'})
+}

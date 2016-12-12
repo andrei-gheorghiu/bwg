@@ -7,8 +7,10 @@
 	</main>
 
 	<aside>
-		<?php $cart = 0; include('components/cart.php') ?>
-		<?php include('components/promotions.php') ?>
+		<div class="wrapper">
+			<?php $cart = 0; include('components/cart.php') ?>
+			<?php include('components/promotions.php') ?>
+		</div>
 	</aside>	
 
 </div>

@@ -1,3 +1,7 @@
+<?php
+$cart = isset($cart) ? $cart : false;
+?>
+
 <section class="cart">
 	<h3>Current Order</h3>
 	<div class="order">

@@ -33,7 +33,7 @@ gulp.task('styles', function(){
     .pipe(sass({
       includePaths: require('node-neat').includePaths.concat(neat)
     }))
-    .pipe($.autoprefixer('last 1 version'))
+    .pipe($.autoprefixer('> 0%'))
     .pipe(filter('**/*.css'))
     .pipe($.csso())
     .pipe(gulp.dest('./app/assets/css/'))

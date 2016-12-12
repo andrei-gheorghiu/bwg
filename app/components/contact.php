@@ -1,4 +1,3 @@
-
 <section class="contact">
 	<h2>Contact</h2>
 	<div class="contact-info">

@@ -1,4 +1,5 @@
-<?php $login = true; include('snippets/header.php') ?>
+<?php
+$login = true; include('snippets/header.php') ?>
 
 <div id="wrap">
 

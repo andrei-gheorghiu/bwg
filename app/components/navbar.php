@@ -1,3 +1,5 @@
+<?php $login = isset($login)? $login:false; ?>
+
 <header>
   <div>
     <div class="logo">

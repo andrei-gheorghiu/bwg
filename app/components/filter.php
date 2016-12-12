@@ -1,4 +1,3 @@
-
 <div class="filter">
 
   <ul class="top">

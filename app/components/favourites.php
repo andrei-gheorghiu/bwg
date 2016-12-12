@@ -1,4 +1,3 @@
-
 <section class="title">
 	<h2>My Lists</h2>
 	<form class="newList">

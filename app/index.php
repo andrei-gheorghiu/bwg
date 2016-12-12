@@ -9,11 +9,11 @@
 	</main>
 
 	<aside class="hide">
+		<div class="wrapper">
+			<?php include('components/cart.php') ?>
 
-		<?php include('components/cart.php') ?>
-
-		<?php include('components/promotions.php') ?>
-
+			<?php include('components/promotions.php') ?>
+		</div>
 	</aside>	
 
 </div>

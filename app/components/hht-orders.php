@@ -1,3 +1,6 @@
+<?php
+$hht = isset($hht) ? $hht:false;
+?>
 
 <section class="title">
 		<h2>HHT Orders</h2>

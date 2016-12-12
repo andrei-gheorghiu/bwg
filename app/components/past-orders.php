@@ -1,4 +1,3 @@
-
 <section class="title">
 	<h2>Past Orders</h2>
 </section>

@@ -1,4 +1,3 @@
-
 <section class="title">
 	<h2>Current Order</h2>
 	<div class="steps">
