@@ -1,5 +1,6 @@
 <section class="title">
 	<h2>Past Orders</h2>
+	<a href="/" class="btn">Return to Products</a>
 </section>
 
 
@@ -33,6 +34,7 @@
 </ul>
 
 <div class="past-pagination">
+	<a href="/" class="btn" style="float: right;">Add To Cart</a>
 	<div>
 		<a class="prev" href="#"><</a>
 		<ul>
@@ -42,4 +44,5 @@
 		</ul>
 		<a class="next" href="#">></a>	
 	</div>
+
 </div>
