@@ -1,0 +1,62 @@
+.landing {
+	width: 780px;
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	& > ul {
+		display: flex;
+		flex-direction: row;
+   		flex-wrap: wrap;
+		& > li {
+			position: relative;
+			flex: 1 0 calc(50% - #{$vert/3});
+			margin-right: 20px;
+			margin-bottom: 20px;
+			background: white;
+			display: inline-block;
+			font-size: 30px;
+			font-weight: 700;
+			&:nth-child(even) {
+				margin-right: 0px;
+			}
+			& > a {
+				transition: $trans;
+				background: white;
+				display: block;
+				padding: 30px;
+			}
+		}
+	}
+
+	// Sub navigation inside departments
+	& > ul li:hover {
+		a {
+			background: $col1;
+			color: white;
+		}
+		ul.sub-nav {
+			opacity: 1;
+			pointer-events: inherit;
+			a {
+				color: white;
+			}
+		}
+	}
+	ul.sub-nav {
+		position: absolute;
+		width: 100%;
+		z-index: 333;
+		background: $col1;
+		left: 0px;
+		top: 100%;
+		opacity: 0;
+		pointer-events: none;
+		li {
+			display: block;
+			padding: 20px 30px;
+			border-top: 0px;
+		}
+	}
+}

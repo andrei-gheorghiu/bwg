@@ -1,0 +1,79 @@
+#popup {
+	position: fixed;
+	display: block;
+	width: 40%;
+	height: 40%;
+	background: white;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	color: black;
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+	& > div {
+		overflow-y: auto;
+		height: 100%;
+		padding: 55px;
+		h2 {
+			margin-bottom: 20px;
+			color: $col1;
+		}
+		p {
+			margin-bottom: 20px;
+			line-height: 1.5em;
+			a {
+				border-bottom: 2px solid $col2;
+			}
+		}
+		div.orders {
+			display: flex;
+			p {
+				flex: 1;
+				display: block;
+				color: $col1;
+				span {
+					color: white;
+					display: inline-block;
+					width: 30px;
+					height: 30px;
+					padding-top: 2px;
+					border-radius: 15px;
+					background: $col2;
+					text-align: center;
+				}
+			}
+		}
+		.errors {
+			display: block;
+			margin-bottom: 30px;
+			h3 {
+				color: tomato;
+				margin-bottom: 20px;
+			}
+			li {
+				margin-bottom: 20px;
+				color: tomato;
+				line-height: 1.4em;
+
+			}
+
+			&.hide {
+				display: none;
+			}
+		}
+
+	}
+
+	.close {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		width: 40px;
+		height: 40px;
+		font-size: 32px;
+		color: $col2;
+		z-index: 11;
+	}
+
+}

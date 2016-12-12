@@ -1,0 +1,119 @@
+
+* { margin: 0; padding: 0; -webkit-font-smoothing: antialiased; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+form, textarea, label, fieldset { border: none; outline: none; margin: 0; padding: 0; }
+a { text-decoration: none; color: #000; }
+li { list-style-type: none; }
+h1,h2,h3,h4,h5,h6 { margin: 0; padding: 0; }
+// Utilities
+
+.hide { display: none; }
+.invisible { opacity: 0; pointer-events: none; }
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+// MIXINS
+@mixin phone { @media (max-width: 480px) { @content; } }
+@mixin tablet { @media only screen and (min-width: 481px) and (max-width: 768px) { @content; } }
+@mixin desk { @media only screen and (min-width: 769px) and (max-width: 1440px) { @content; } }
+@mixin super { @media only screen and (min-width: 1441px) { @content; } }
+
+
+// Dynamic media query mixin
+@mixin prop($property, $phoneval, $tabletval, $deskval, $superval) {
+  @include phone {
+    #{$property}: #{$phoneval};
+  }
+  @include tablet {
+    #{$property}: #{$tabletval};
+  }
+  @include desk {
+    #{$property}: #{$deskval};
+  }
+  @include super {
+    #{$property}: #{$superval};
+  }
+}
+
+// Variables
+$cubic: cubic-bezier(.71,.04,.32,.95);
+$timing: .5s;
+$sans: 'Montserrat', Arial, Helvetica, sans-serif;
+
+$trans: all $cubic .3s;
+
+$vert: 60px;
+$third: calc(100% / 3);
+
+$color1: #000000;
+$col1: #000091;
+$col2: #66ca91;
+$g20: #cccccc;
+$g50: #808080;
+$tint: lighten($col2, 30%); 
+
+
+
+// Resets
+
+
+body {
+  background: lighten($g20, 15%);
+  color: white;
+  font-family: $sans;
+  font-size: 17px;
+}
+
+#wrap {
+  display: flex;
+  padding: 0 2vw; 
+  margin: 116px auto 0;
+  max-width: 1600px;
+  position: relative;
+  main {
+    // flex: 3;
+    width: calc(75% - 2vw);
+    min-height: calc(100vh - 96px);
+    padding-bottom: 50px;
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+
+  aside {
+    width: 25%;
+    margin-left: 20px;
+    position: fixed;
+    right: 2vw;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+}
+
+
+.btn {
+  background: $col1;
+  border: none;
+  text-transform: uppercase;
+  padding: 12px 17px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  transition: $trans;
+}
+
+
+
+::-webkit-input-placeholder { color: black; }
+:-moz-placeholder { color: black; }
+::-moz-placeholder { color: black; }
+:-ms-input-placeholder { color: black; }
+::selection {
+  background: $tint; 
+}
+::-moz-selection {
+  background: $col2;
+}

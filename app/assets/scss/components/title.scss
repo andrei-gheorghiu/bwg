@@ -1,0 +1,100 @@
+section.title {
+	background: white;
+	padding: 25px 20px 30px 20px;
+	color: black;
+	margin-bottom: 20px;
+	h2 {
+		display: inline-block;
+		line-height: 30px;
+		margin-top: 5px;
+	}
+	.steps {
+		margin-top: -3px;
+		margin-right: -5px;
+		float: right;
+		font-weight: 100;
+		text-transform: capitalize;
+		font-size: 18px;
+		letter-spacing: 0px;
+		padding: 12px 12px;
+		position: relative;
+		&::before {
+			content: " ";
+			height: 2px;
+		    width: calc(100% - 71px);
+		    right: 14px;
+			background: #ccc;
+			display: inline-block;
+			position: absolute;
+			top: 20px;
+		}
+		.btn {
+			float: left;
+			position: relative;
+			z-index: 333;
+			border-radius: 24px;
+			height: 32px;
+			width: 32px;
+			padding: 0px;
+			text-align: center;
+			line-height: 32px;
+			margin-top: -10px;
+			margin-left: 30px;
+			display: inline-block;
+			background: #ccc;
+			&.active {
+				background: #000;
+			} 
+		}
+	}
+	.newList {
+		float: right;
+		margin-top: 3px;
+		input[type="text"] {
+			float: left;
+			background: lighten($g20, 5%);
+			padding: 10px;
+			margin-top: -3px;
+			border-radius: 5px;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
+		input {
+			display: inline-block;
+			line-height: 0;
+			height: 40px;
+			border: none;
+			outline: none;
+			font-family: $sans;
+		}
+		input[type="submit"] {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			&:hover {
+				background: $col2;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+
+section.title {
+	background: white;
+	padding: 25px 20px 30px 20px;
+	color: black;
+	h2 {
+		display: inline-block;
+		line-height: 30px;
+		margin-top: 5px;
+	}
+	.btn {
+		margin-top: -3px;
+		float: right;
+		font-weight: 100;
+		text-transform: capitalize;
+		font-size: 18px;
+		letter-spacing: 0px;
+		padding: 12px 25px;
+	}
+}

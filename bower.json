@@ -1,0 +1,14 @@
+{
+  "name": "sea-to-table-pos-tool",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0"
+  },
+  "devDependencies": {
+    "modernizr": "~3.2.0",
+    "jquery.cookie": "~1.4.1",
+    "jquery-placeholder": "~2.3.0",
+    "fastclick": "~1.0.6"
+  }
+}

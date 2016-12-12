@@ -1,0 +1,29 @@
+.contact {
+	background: white;
+	padding: 40px;
+	color: black;
+	overflow: hidden;
+	min-height: 500px;
+	h2 {
+		display: block;
+		line-height: 30px;
+		margin-top: 5px;
+		margin-bottom: 40px;
+	}
+	.contact-info {
+		width: 25%;
+		float: left;
+		margin-right: 30px;
+		h4, a {
+			display: block;
+			line-height: 25px;
+			font-size: 18px;
+		}
+	}
+	p {
+		width: 40%;
+		line-height: 25px;
+		font-size: 18px;
+		float: left;
+	}
+}

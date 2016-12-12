@@ -1,0 +1,209 @@
+.filter {
+	width: 100%;
+	background: $col1;
+	margin-bottom: 20px;
+	li {
+		display: inline;
+	}
+	a { 
+		color: white;
+		text-decoration: none;
+		padding: 7px 8px;
+		&.active {
+			background: $col2;
+			color: white;
+		}
+	}
+	.top {
+		padding: 25px 20px;
+		.right {
+			float: right;
+		}
+		li:first-child::before {
+			content: 'Filter by:';
+			color: white;
+			opacity: .4;
+			margin-right: 8px;
+		}
+		.showFull {
+			&.open {
+				svg {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		.applyFilter, .resetFilter {
+			background: white;
+			color: $col1;
+			margin-right: 10px;
+			transition: $trans;
+			&:hover {
+				background: $col2;
+				color: white;
+			}
+		}
+	}
+	.full {
+		padding: 20px 15px;
+		// border-top: 2px solid rgba(0,0,0,.2);
+		overflow: auto;
+		background: lighten($col1, 65%);
+		ul {
+			width: 25%;
+			float: left;
+		}
+		li {
+			display: block;
+			padding: 5px;
+		}
+		label {
+			color: $col1;
+			font-size: 15px;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		input[type="checkbox"] {
+			display: none;
+		}
+		input[type="checkbox"] + label span.checkbox {
+			display:inline-block;
+		    width:15px;
+		    height:15px;
+		    margin:-1px 4px 0 0;
+		    vertical-align:middle;
+		    background:url('/assets/images/checkbox.svg') left top no-repeat;
+		    cursor:pointer;
+		}
+		input[type="checkbox"]:checked + label span.checkbox {
+		    background:url('/assets/images/checkbox.svg') -18px top no-repeat;
+		}
+		span:last-child {
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			margin-right: 5px;
+			vertical-align: top;
+		}
+		.topseller {
+			background: url('/assets/images/topseller.svg') center center no-repeat;
+		}
+		.newproducts {
+			background: url('/assets/images/newproducts.svg') center center no-repeat;
+		}
+		.ownbrand {
+			background: url('/assets/images/ownbrand.svg') center center no-repeat;
+		}
+		.multibuy {
+			background: url('/assets/images/multibuy.svg') center center no-repeat;
+		}
+		.handbill {
+			background: url('/assets/images/handbill.svg') center center no-repeat;
+		}
+		.core {
+			background: url('/assets/images/core.svg') center center no-repeat;
+		}
+		.recommended {
+			background: url('/assets/images/recommended.svg') center center no-repeat;
+		}
+		.mixed {
+			background: url('/assets/images/mixed.svg') center center no-repeat;
+		}
+		.small {
+			background: url('/assets/images/small.svg') center center no-repeat;
+		}
+		.noon {
+			background: url('/assets/images/noon.svg') center center no-repeat;
+		}
+		.nine {
+			background: url('/assets/images/nine.svg') center center no-repeat;
+		}
+	}
+	.dropdowns {
+		padding: 15px 15px 20px;
+		border-top: 2px solid rgba(255,255,255,.2);
+		display: flex;
+		div {
+			flex: 1;
+			margin-right: 20px;
+			position: relative;
+			z-index: 8888;
+			&:last-child {
+				margin-right: 0px;
+			}
+			&.out {
+				opacity: .3;
+				pointer-events: none;
+			}
+			& > a {
+				display: block;
+				padding: 10px;
+				background: white;
+				color: $col1;
+				position: relative;
+				&::before {
+					content:'';
+					position: absolute;
+					height: 10px;
+					width: 10px;
+					background: transparent;
+					border-right: 2px solid $col1;
+					border-bottom: 2px solid $col1;
+					transform: rotate(45deg);
+					top: 30%;
+					right: 14px;
+				}
+				&::after {
+					content:'';
+					position: absolute;
+					width: calc(100% - 16px);
+					height: 0px;
+					background: $col1;
+					bottom: 0px;
+					left: 8px;
+				}
+				&.active {
+					background: white;
+					color: $col1;
+					&::before {
+						border-color: $col1;
+						top: 40%;
+						transform: rotate(225deg);
+					}
+					&::after {
+						width: 100%;
+						left: 0px;
+						height: 2px;
+						background: rgba(0,0,0,.1);
+					}
+				}
+			}
+			ul {
+				background: white;
+				// display: block;
+				width: 100%;
+				position: absolute;
+				box-shadow: 0px 0px 1px 2px rgba(0,0,0,.1);
+				li {
+					display: block;
+					padding: 9px 0 0 0;
+					&:last-child {
+						padding-bottom: 9px;
+					}
+					a {
+						// display: block;
+						color: $col1;
+					}
+				}
+			}
+		}
+	}
+}
+
+.planogram {
+	margin-top: 20px;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
