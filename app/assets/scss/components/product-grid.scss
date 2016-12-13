@@ -277,7 +277,7 @@
 				padding: 5px;
 				color: white;
 				transition: $trans;
-				&:hover {
+				&:hover,&.active {
 					background: $col2;
 				}
 			}

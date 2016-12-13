@@ -126,15 +126,19 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 			<p>Stock Card Info</p>
 		</div>
 	</div>	
-	<?php } ?>
+	<?php }
+	$page = isset($_GET['page'])?$_GET['page']:1;
+	$hash = '?'. ($chill ? 'chill=true&' :'').'page=';
+	$linkClass = ' class="active"';
+	?>
 
 	<div class="options">
 		<div class="pagination">
 			<a class="prev" href="#"><</a>
 			<ul>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
+				<li><a<?= $page == 1 ? $linkClass:'' ;?> href="<?= $hash ;?>1">1</a></li>
+				<li><a<?= $page == 2 ? $linkClass:'' ;?> href="<?= $hash ;?>2">2</a></li>
+				<li><a<?= $page == 3 ? $linkClass:'' ;?> href="<?= $hash ;?>3">3</a></li>
 			</ul>
 			<a class="next" href="#">></a>
 		</div>

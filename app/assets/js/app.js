@@ -139,12 +139,12 @@ function showPlanogram(){
   } else {
     pGram.addClass('hide');
   }
-  setTimeout(removePngs, 100);
+  setTimeout(removePngs, 0);
 }
 
 function removePngs() {
   var pGram = $('div.planogram');
-  if (pGram.find('a').length()) {
+  if (pGram.find('a').length) {
     pGram.find('a').each(function () {
       $(this).text($(this).text().replace('.png', ''));
     });
