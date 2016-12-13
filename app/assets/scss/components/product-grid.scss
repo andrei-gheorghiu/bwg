@@ -141,11 +141,33 @@
 		
 		.stockcard {
 			display: none;
-			background: $tint;
+			background: white;
 			margin-top: -1px;
 			border-bottom: 1px solid lighten($g20, 5%) !important;
 			&.open {
 				display: block;
+				table {
+					border: 1px solid #f5f5f5;
+					width: 100% !important;
+					th, td:first-of-type {
+						background-color: #f5f5f5;
+						white-space: nowrap;
+					}
+					td, th {
+						padding: 2px 5px;
+						line-height: 30px;
+						text-align: center;
+						&.td-left {
+							text-align: left;
+						}
+						&.td-right {
+							text-align: right;
+						}
+					}
+					td {
+						border-bottom: 1px solid #f5f5f5;
+					}
+				}
 			}
 		}
 
@@ -204,10 +226,9 @@
 				& > input {
 					width: 30px;
 					height: 30px;
-					border-top: 2px solid $g20;
-					border-bottom: 2px solid $g20;
-					border-left: 0px solid $g20;
-					border-right: 0px solid $g20;
+					border: 2px solid;
+					border-right-width: 0;
+					border-left-width: 0;
 					margin-right: -4px;
 					text-align: center;
 					font-family: $sans;
@@ -316,7 +337,6 @@ ul.favList {
 		padding: 3px 0;
 	}
 	input[type="text"] {
-		background: transparent;
 		outline: none;
 		border: none;
 		border-bottom: 3px solid $col2;

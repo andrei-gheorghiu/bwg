@@ -58,9 +58,22 @@
 			<a href="#" class="btn">Checkout</a>
 		</div>
 
-
-
 	</div>
-
-
+	<div class="after-cart">
+		<div class="heading">Options:</div>
+		<p>Or <span class="toggle-btn" onclick="toggleCartButton(this)">
+				<input type="hidden" name="cartAction" id="cartAction" value="replace" />
+				<span class="option" data-value="replace">replace</span>
+				<span class="toggle"></span>
+				<span class="option hidden" data-value="addTo">add to</span>
+			</span> cart from a previous order. <select>
+				<option value="1">Order 1</option>
+				<option value="2">Order 2</option>
+				<option value="3">Order 3</option>
+				<option value="4">Order 4</option>
+				<option value="5">Order 5</option>
+				<option value="6">Order 6</option>
+			</select>
+			<input type="button" class="cart_opts_go" onclick="javascript: submitForm('cartFrm','prev');" value="Select"></p>
+	</div>
 </section>

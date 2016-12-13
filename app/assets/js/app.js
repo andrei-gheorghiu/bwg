@@ -71,6 +71,18 @@ function toggleErrors(e) {
 
 }
 
+function toggleCartButton (e){
+  var value = '';
+  $(e).children('.option').each(function(){
+    $(this).toggleClass('hidden');
+    if (!this.classList.contains('hidden')) {
+      value = $(this).data('value');
+    }
+  });
+  $('#cartAction').val(value);
+
+}
+
 function hhtOrders() {
   
   setTimeout(function(){

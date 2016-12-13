@@ -122,8 +122,68 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 				<li class="card"><a class="toggleStockCard" href="#">View Stock Card</a></strong></li>
 			</ul>
 		</div>
-		<div class="stockcard">
-			<p>Stock Card Info</p>
+		<div class="stockcard" id="info88216">
+				<table cellspacing="1">
+					<tbody><tr class="sales_info_title_Chill">
+						<th class="sales_info_detail" style="width: 61px;"><strong>Sales</strong></th>
+						<th class="sales_info_detail" colspan="2">Sun</th>
+						<th class="sales_info_detail" colspan="2">Mon</th>
+						<th class="sales_info_detail" colspan="2">Tues</th>
+						<th class="sales_info_detail" colspan="2">Wed</th>
+						<th class="sales_info_detail" colspan="2">Thur</th>
+						<th class="sales_info_detail" colspan="2">Fri</th>
+						<th class="sales_info_detail" colspan="2">Sat</th>
+					</tr>
+					<tr class="sales_info_row_Chill">
+						<td>last week</td>
+						<td id="s_lw_qty_0_88216"></td><td id="s_lw_val_0_88216"></td>
+						<td id="s_lw_qty_1_88216"></td><td id="s_lw_val_1_88216"></td>
+						<td id="s_lw_qty_2_88216"></td><td id="s_lw_val_2_88216"></td>
+						<td id="s_lw_qty_3_88216"></td><td id="s_lw_val_3_88216"></td>
+						<td id="s_lw_qty_4_88216"></td><td id="s_lw_val_4_88216"></td>
+						<td id="s_lw_qty_5_88216"></td><td id="s_lw_val_5_88216"></td>
+						<td id="s_lw_qty_6_88216"></td><td id="s_lw_val_6_88216"></td>
+					</tr>
+					<tr class="sales_info_row_Chill">
+						<td>4 wk avg</td>
+						<td id="s_4w_qty_0_88216"></td><td id="s_4w_val_0_88216"></td>
+						<td id="s_4w_qty_1_88216"></td><td id="s_4w_val_1_88216"></td>
+						<td id="s_4w_qty_2_88216"></td><td id="s_4w_val_2_88216"></td>
+						<td id="s_4w_qty_3_88216"></td><td id="s_4w_val_3_88216"></td>
+						<td id="s_4w_qty_4_88216"></td><td id="s_4w_val_4_88216"></td>
+						<td id="s_4w_qty_5_88216"></td><td id="s_4w_val_5_88216"></td>
+						<td id="s_4w_qty_6_88216"></td><td id="s_4w_val_6_88216"></td>
+					</tr>
+					<tr class="sales_info_row_Chill">
+						<td>daily rank</td>
+						<td colspan="2" id="s_dr_rank_0_88216"></td>
+						<td colspan="2" id="s_dr_rank_1_88216"></td>
+						<td colspan="2" id="s_dr_rank_2_88216"></td>
+						<td colspan="2" id="s_dr_rank_3_88216"></td>
+						<td colspan="2" id="s_dr_rank_4_88216"></td>
+						<td colspan="2" id="s_dr_rank_5_88216"></td>
+						<td colspan="2" id="s_dr_rank_6_88216"></td>
+					</tr>
+					<tr class="sales_info_title_Chill">
+						<td colspan="15" class="td-left"><strong>Purchases</strong></td>
+					</tr>
+					<tr class="sales_info_row_Chill">
+						<td>last week</td>
+						<td colspan="14" id="p_lw_0_88216"></td>
+					</tr>
+					<tr class="sales_info_row_Chill">
+						<td>4 week avg</td>
+						<td colspan="14" id="p_4w_0_88216"></td>
+					</tr>
+					<tr class="sales_info_row_Chill">
+						<td colspan="15" id="graph_header_store_88216"><a class="stockcardlink" href="javascript:toggleGraph('graph_image_88216', 'My Store', 'graph_image_store_88216_link');" id="graph_image_store_88216_link">Display Sales Trend My Store</a></td>
+					</tr>
+					<tr id="graph_image_88216" style="display:none">
+						<td colspan="15" id="dgraph_0_88216"><img src="/graphs/2167_88216d.png"></td>
+					</tr>
+					</tbody>
+				</table>
+
 		</div>
 	</div>	
 	<?php }
