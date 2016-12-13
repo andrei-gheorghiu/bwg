@@ -59,14 +59,16 @@
 		</div>
 
 	</div>
+	<div class="sectionDivider"></div>
 	<div class="after-cart">
-		<div class="heading">Options:</div>
-		<p>Or <span class="toggle-btn" onclick="toggleCartButton(this)">
+		<div class="heading"><strong>Options</strong></div>
+		<p class="select-line">Or <span class="toggle-btn" onclick="toggleCartButton(this)">
 				<input type="hidden" name="cartAction" id="cartAction" value="replace" />
 				<span class="option" data-value="replace">replace</span>
 				<span class="toggle"></span>
 				<span class="option hidden" data-value="addTo">add to</span>
 			</span> cart from a previous order. <select>
+				<option value="" class="default">select order</option>
 				<option value="1">Order 1</option>
 				<option value="2">Order 2</option>
 				<option value="3">Order 3</option>

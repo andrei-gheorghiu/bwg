@@ -154,9 +154,32 @@ section.checkout {
 	.options {
 		display: none;
 	}
+	.sectionDivider {
+		height: 20px;
+		margin: 0 -20px;
+		background-color: #f2f2f2;
+	}
 	.after-cart {
 		.heading {
 			margin-bottom: 20px;
+		}
+		p.select-line {
+			display: inline-flex;
+			align-items: center;
+			select, input[type=button] {
+				padding: 5px;
+				border: 1px solid #ccc;
+				font-family: "Montserrat",Arial,Helvetica,sans-serif;
+				background-color: white;
+				margin-left: 20px;
+			}
+			input[type=button] {
+				padding: 8px 20px 7px;
+				background: #000091;
+				color: #fff;
+				border: none;
+				cursor:pointer;
+			}
 		}
 		.toggle-btn {
 			padding: 0;
