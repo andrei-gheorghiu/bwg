@@ -50,7 +50,7 @@ header {
 			border-radius: 0 5px 5px 0;
 			transition: $trans;
 			&:hover {
-				background-color: #000091;
+				background-color: #000;
 				color: white;
 			}
 		}
@@ -100,7 +100,7 @@ header {
 			transition: $trans;
 			&:hover {
 				color: white;
-				background: #000091 url("../images/search-white.svg") 50% 50% no-repeat;
+				background: #000 url("../images/search-white.svg") 50% 50% no-repeat;
 			}
 		}
 	}
