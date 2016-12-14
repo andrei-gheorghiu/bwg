@@ -50,7 +50,8 @@ header {
 			border-radius: 0 5px 5px 0;
 			transition: $trans;
 			&:hover {
-				background-color: #ccc;
+				background-color: #000091;
+				color: white;
 			}
 		}
 	}
@@ -92,13 +93,14 @@ header {
 			display: block;
 			width: 50px;
 			height: 48px;
-			background: transparent url(../images/search.svg) 50% 50% no-repeat;
+			background: transparent url("../images/search.svg") 50% 50% no-repeat;
 			cursor: pointer;
 			border: solid white;
 			border-width: 0 1px;
 			transition: $trans;
 			&:hover {
-				background-color: #ccc;
+				color: white;
+				background: #000091 url("../images/search-white.svg") 50% 50% no-repeat;
 			}
 		}
 	}
