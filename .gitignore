@@ -11,3 +11,4 @@
 /app/kirby
 /app/panel
 /app/content
+**/app.css
