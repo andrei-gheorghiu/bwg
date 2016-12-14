@@ -6,6 +6,7 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 ?>
 <section class="grid">
 	<div class="master">
+		<div class="promotag"></div>
 		<div class="name">
 			<a href="#" class="active">Name
 				<div class="arrows">
@@ -68,6 +69,7 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 	<?php for($x = 0; $x <= $count; $x++){ ?>
 	<div class="item <?php if($full) { echo 'active'; } ?> <?php if($x == 3) { echo 'incart'; } ?> ">
 		<div>
+			<div class="promotag"></div>
 			<div class="name">Wine A. This would be a long title to demonstrate fixing issue 52
 				<span><a href="#" class="addFavourite <?php if($x == 5) { echo 'active'; } ?>"></a></span>
 			</div>

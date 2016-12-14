@@ -22,12 +22,22 @@
 			&.basket, &.delete, &.view {
 				flex: .5;
 			}
+			&.promotag {
+				flex: 0 0 18px;
+				background: transparent url('../images/promotag.svg') no-repeat 50% 50% /contain;
+				padding: 3px 3px 3px 0;
+				box-sizing: content-box;
+				margin-right: 15px;
+			}
 		}
 	}
 
 	.master {
 		padding: 20px;
 		border-bottom: 2px solid black;
+		.promotag {
+			background: none;
+		}
 		& > div {
 			color: $g50;
 			letter-spacing: .2px;
