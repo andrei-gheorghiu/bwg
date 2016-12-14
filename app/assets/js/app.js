@@ -42,11 +42,11 @@ $d
 // Favourites List
 .on('click', 'a.addFavourite', toggleFavs)
 .on('submit', 'form.addList', addList)
-.on('click', 'ul.favList a', addToList);
+.on('click', 'ul.favList a', addToList)
+.on('click', '.toggleSwitch', toggleSwitch);
 $w
 .on('load resize', windowResized)
 .trigger('resize');
-
 
 // Functions
 
@@ -80,7 +80,16 @@ function toggleCartButton (e){
     }
   });
   $('#cartAction').val(value);
+}
 
+function toggleSwitch(e) {
+  var ts = $(e.target).closest('.toggleSwitch'),
+      input = ts.find('input').eq(0),
+      toggle = ts.find('.toggle');
+  console.log(input);
+  ts.toggleClass('on');
+  toggle.toggleClass('on');
+  input.attr('checked', ts[0].classList.contains('on'));
 }
 
 function hhtOrders() {

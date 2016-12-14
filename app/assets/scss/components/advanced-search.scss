@@ -1,0 +1,138 @@
+.page {
+  background-color: #fff;
+  color: #000;
+  padding: 30px;
+  input[type=text], select, .btn {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    min-height: 48px;
+    line-height: 28px;
+    cursor: pointer;
+    margin-top: 0;
+    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+    border: 1px solid #ccc;
+    & + * {
+      margin-top: 20px;
+      display: inline-block;
+    }
+  }
+  .btn {
+    border: none;
+  }
+  .search-links a {
+    color: #66ca91;
+    padding: 0 15px;
+    transition: color .25s cubic-bezier(.4,0,.2,1);
+    &:first-child {
+      padding-left: 0;
+    }
+    &:hover {
+      color: #12a150;
+    }
+  }
+  div.radio-group {
+    display: flex;
+    justify-content: space-between;
+    label {
+      line-height: 30px;
+    }
+  }
+  dl {
+    dd,dt {
+      display: inline-block;
+      float: left;
+      padding: 10px;
+    }
+    dd{
+      color: #666;
+    }
+    dt {
+      clear: left;
+      padding-left: 0;
+      font-weight: bold;
+      width: 150px;
+    }
+    code {
+      background-color: #f5f5f5;
+      border: 1px solid #eee;
+      border-radius: 3px;
+      padding: 1px 4px;
+      margin: 0 4px;
+    }
+  }
+  .small {
+    font-weight: 200;
+    font-size: 15px;
+  }
+}
+.table {
+  display: table;
+  .tr {
+    display: table-row;
+    .th,.td {
+      display: table-cell;
+      padding: 10px;
+      vertical-align: middle;
+      &:first-child {
+        vertical-align: top;
+        width: 360px;
+      }
+      & + .td {
+        padding-left: 30px;
+      }
+
+    }
+  }
+}
+.toggleSwitch {
+  position: relative;
+  display: inline-flex;
+  width: 100px;
+  &.wide {
+    width: 120px;
+  }
+  &.wider {
+    width: 150px;
+  }
+  height: 34px;
+  align-items: center;
+  background-color: #ddd;
+  &.on {
+    background-color: #66ca91;
+  }
+  padding: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color .1s linear .1s;
+  input {
+    display: none;
+  }
+  .toggle {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    position: absolute;
+    display: inline-block;
+    background-color: white;
+    right: calc(100% - 32px);
+    transition: right .25s cubic-bezier(.4,0,.2,1);
+    &.on {
+      right: 2px;
+    }
+    &:before,&:after {
+      display: inline-block;
+      position: absolute;
+      top:0;
+      padding: 0 10px;
+    }
+    &:before {
+      content: attr(data-on);
+      right: 100%;
+    }
+    &:after {
+      left: 100%;
+      content: attr(data-off);
+    }
+  }
+}

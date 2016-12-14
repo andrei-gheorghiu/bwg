@@ -6,13 +6,16 @@
       <a href="index.php">Shoplink</a>
     </div>
 
-    <div class="search <?php if($login) { echo 'invisible'; } ?>">
+    <div class="searchContainer">
+      <div class="search <?php if($login) { echo 'invisible'; } ?>">
 
-      <input type="text" class="searchbox" placeholder="Search Products">
+        <input type="text" class="searchbox" placeholder="Search Products">
 
-      <input type="submit" value="Search">
-
+        <input type="submit" value="Search">
+      </div>
+      <a href="search.php">Custom Search</a>
     </div>
+
     
     <nav class="<?php if($login) { echo 'invisible'; } ?>">
 
