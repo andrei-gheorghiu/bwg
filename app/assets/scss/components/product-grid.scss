@@ -35,7 +35,7 @@
 	.master {
 		padding: 20px;
 		border-bottom: 2px solid black;
-		.promotag {
+		&>div.promotag {
 			background: none;
 		}
 		& > div {
