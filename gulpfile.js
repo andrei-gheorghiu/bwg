@@ -3,6 +3,10 @@
 // modified by AATâ€”C July 21 2015
 
 var gulp = require('gulp');
+var postcss = require('gulp-postcss');
+var scss = require('postcss-scss');
+var autoprefixer = require('gulp-autoprefixer');
+var flexboxfixer = require('postcss-flexboxfixer');
 
 // load plugins
 var $ = require('gulp-load-plugins')(),
@@ -23,22 +27,20 @@ var paths = {
   // fonts: './source/assets/fonts/*'
 };
 
+
 gulp.task('styles', function(){
+
+    var processors = [autoprefixer, flexboxfixer];
+
     return gulp.src(paths.scss)
-    .pipe(plumber(function(error) {
-            gutil.log(gutil.colors.red(error.message));
-            gutil.beep();
-            this.emit('end');
-    }))
-    .pipe(sass({
-      includePaths: require('node-neat').includePaths.concat(neat)
-    }))
-    .pipe($.autoprefixer('> 0%'))
-    .pipe(filter('**/*.css'))
-    .pipe($.csso())
-    .pipe(gulp.dest('./app/assets/css/'))
-    .pipe($.size())
-    .pipe(reload({stream:true}));
+        .pipe(sass({
+          includePaths: require('node-neat').includePaths.concat(neat)
+        }))
+        .pipe(postcss(processors, {syntax: scss}))
+        .pipe($.csso())
+        .pipe(gulp.dest('./app/assets/css/'))
+        .pipe($.size())
+        .pipe(reload({stream:true}));
 });
 
 gulp.task('scripts', function(){
