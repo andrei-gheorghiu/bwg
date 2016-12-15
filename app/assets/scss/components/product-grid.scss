@@ -159,6 +159,7 @@
 				table {
 					border: 1px solid #f5f5f5;
 					width: 100% !important;
+					border-collapse: collapse;
 					th, td:first-of-type {
 						background-color: #f5f5f5;
 						white-space: nowrap;
@@ -175,7 +176,7 @@
 						}
 					}
 					td {
-						border-bottom: 1px solid #f5f5f5;
+						border: 1px solid #eee;
 					}
 				}
 			}
