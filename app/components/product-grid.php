@@ -98,9 +98,7 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 			<div class="img">
 				<img src="http://www.placehold.it/200x120" alt="">
 			</div>
-			<div class="description"><h3>Description</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea error laborum, velit doloribus delectus<br />
-				<?php if ($chill) { ?><strong>Shelf life:</strong> 2 months <?php } ;?>
-				</p>
+			<div class="description"><h3>Description</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea error laborum, velit doloribus delectus</p>
 			</div>
 			<ul class="codes">
 				<li class="ean"><strong>EAN:</strong> 898709870987</li>
@@ -122,6 +120,7 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 				</li>
 				<li class="supplier"><strong>Supplier:</strong> McDonagh</li>
 				<li class="card"><a class="toggleStockCard" href="#">View Stock Card</a></strong></li>
+				<?php if ($chill) { ?><li class="shelfLife"><strong>Shelf life:</strong>2 months <?php } ;?>
 			</ul>
 		</div>
 		<div class="stockcard" id="info88216">

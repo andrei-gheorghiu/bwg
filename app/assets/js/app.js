@@ -31,7 +31,8 @@ $d
 // Product Grid
 .on('click', '.quantity button.down, .quantity button.up', updateQuantity)
 .on('click', '.master > div:not(.view) > a', productOrder)
-.on('click', '.grid .item', openItem)
+.on('click touchend', '.grid > .item', openItem)
+.on('touchmove', '.grid > .item', thankYouApple)
 .on('click', '.delete a', removeItem)
 .on('click', '.toggleStockCard', toggleStockCard)
 
@@ -103,7 +104,6 @@ function hhtOrders() {
 
 }
 
-
 function toggleStockCard(e) {
   e.preventDefault();
   l('show stockcard');
@@ -118,19 +118,21 @@ function toggleStockCard(e) {
   }
 }
 
-
+function thankYouApple(e) {
+  window.thankYouApple = true;
+}
 
 function openItem(e) {
+  if (window.thankYouApple) {
+    window.thankYouApple = false;
+    return false;
+  }
 
   if($(e.target).is('.addFavourite, ul.favList a, .up, .down, input, .basket a, .delete a, .toggleStockCard')) {
-    // l(e.target);
+
   } else {
     e.preventDefault();
-    if($(this).hasClass('active')){
-      $(this).removeClass('active');
-    } else {
-      $(this).addClass('active');
-    }
+    $(this).toggleClass('active');
   }
 
 }
