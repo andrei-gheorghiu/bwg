@@ -87,7 +87,8 @@
 }
 .toggleSwitch {
   position: relative;
-  display: inline-flex;
+  display: block;
+  padding: 2px;
   width: 100px;
   &.wide {
     width: 120px;
