@@ -189,19 +189,48 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 	</div>	
 	<?php }
 	$page = isset($_GET['page'])?$_GET['page']:1;
+	$totalPages = 9;
 	$hash = '?'. ($chill ? 'chill=true&' :'').'page=';
 	$linkClass = ' class="active"';
 	?>
 
 	<div class="options">
 		<div class="pagination">
-			<a class="prev" href="#"><</a>
 			<ul>
-				<li><a<?= $page == 1 ? $linkClass:'' ;?> href="<?= $hash ;?>1">1</a></li>
-				<li><a<?= $page == 2 ? $linkClass:'' ;?> href="<?= $hash ;?>2">2</a></li>
-				<li><a<?= $page == 3 ? $linkClass:'' ;?> href="<?= $hash ;?>3">3</a></li>
+<?php
+			if ($page > 1) { ?>
+				<li><a class="prev" href="<?= $hash . ($page - 1); ?>">&lt;</a></li>
+				<?php if ($page > 2) { ?>
+					<li><a href="<?= $hash . '1'; ?>">1</a></li>
+				<?php } ?>
+			<?php }
+
+			if ($page > 3) { ?>
+
+				<li><span>...</span></li>
+			<?php }
+
+
+				for ($p = $page - 1;$p < $page + 2;$p++) {
+					if ($p > 0 && $p < $totalPages ) {
+						?>
+						<li><a<?= $page == $p ? $linkClass : ''; ?> href="<?= $hash . $p; ?>"><?= $p; ?></a></li>
+					<?php }
+				}
+
+			if ($page < $totalPages - 2) { ?>
+				<li><span>...</span></li>
+
+			<?php }
+
+			if ($page < $totalPages) { ?>
+				<li><a href="<?= $hash . $totalPages; ?>"><?= $totalPages; ?></a></li>
+				<li><a class="prev" href="<?= $hash . ($page + 1); ?>">&gt;</a></li>
+			<?php } ?>
 			</ul>
-			<a class="next" href="#">></a>
+		</div>
+		<div class="product-count">
+			Items 1-50 of 4666
 		</div>
 		<div class="actions">
 			<a class="add" href="#">Add Selection to Cart</a>
