@@ -205,7 +205,10 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 				<?php } ?>
 			<?php }
 
-			if ($page > 3) { ?>
+			if ($page == 4) { ?>
+				<li><a href="<?= $hash . '2'; ?>">2</a></li>
+			<?php }
+			if ($page > 4) { ?>
 
 				<li><span>...</span></li>
 			<?php }
