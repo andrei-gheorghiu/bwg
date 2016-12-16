@@ -221,9 +221,13 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 					<?php }
 				}
 
-			if ($page < $totalPages - 2) { ?>
+			if ($page < $totalPages - 3) { ?>
 				<li><span>...</span></li>
 
+			<?php }
+
+			if ($page == ($totalPages -3)) { ?>
+				<li><a href="<?= $hash . $totalPages-1; ?>"><?= $totalPages-1; ?></a></li>
 			<?php }
 
 			if ($page < $totalPages) { ?>
