@@ -30,6 +30,15 @@
     &:hover {
       color: #12a150;
     }
+    &.btn {
+      padding: 12px 17px;
+      color: white;
+      margin-bottom: 15px;
+      text-align: center;
+      &:hover {
+        color: white;
+      }
+    }
   }
   div.radio-group {
     display: flex;
@@ -81,7 +90,6 @@
       & + .td {
         padding-left: 30px;
       }
-
     }
   }
 }
