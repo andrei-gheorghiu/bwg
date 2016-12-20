@@ -70,8 +70,6 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 				<input type="submit" class="btn" value="Search">
 			</span>
 			<span class="td search-links">
-
-				<span class="td search-links">
 				<a class="btn" href="javascript:saveSearch();">Save this search as</a>
 					<input class="input" type="text" name="savename" id="savename">
 				<a href="javascript:loadSearch();">Load saved search</a>
@@ -82,10 +80,6 @@ $chill = isset($_GET['chill']) ? $_GET['chill']:false;
 						<option value="xmas">xmas</option>
 						<option value="xmas promotions">xmas promotions</option>
 					</select>
-			</span>
-
-
-				<a class="btn" href="javascript:void(0)">Save this search</a>|<a href="javascript:void(0)">View saved searches</a>
 			</span>
 		</div>
 	</div>
